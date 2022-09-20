@@ -47,7 +47,7 @@ next(csvfile)
 customer = {}
 
 # iterate through the csv object
-
+outfile.write('Name,Phone,Email\n')
 for record in csvfile:
     full_name = record[1] + ' ' + record[2]
     email = record[4]
@@ -68,10 +68,10 @@ for record in csvfile:
     # print the dictionary after the loop is finished
     print(customer)
 
-
     # iterate through the dictionary and write to the output file
+    
     for i in customer['Name']:
-     outfile.write(str(i['full_name'])+','+i['email']+','+str(i['phone'])+'\n')
+      outfile.write(str(i['full_name'])+','+i['email']+','+str(i['phone'])+'\n')
 
 
 # close your output file
